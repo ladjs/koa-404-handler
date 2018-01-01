@@ -3,7 +3,7 @@ const Router = require('koa-router');
 const Boom = require('boom');
 const test = require('ava');
 const request = require('supertest');
-const koa404Handler = require('..');
+const koa404Handler = require('../lib');
 
 const ok = ctx => {
   ctx.status = 200;
