@@ -2,7 +2,7 @@
   "name": "koa-404-handler",
   "description":
     "404 handler for Lad and Koa (best used with koa-better-error-handler)",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Nick Baugh <niftylettuce@gmail.com> (http://niftylettuce.com/)",
   "bugs": {
     "url": "https://github.com/ladjs/koa-404-handler/issues",
