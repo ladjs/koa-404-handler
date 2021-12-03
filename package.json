@@ -1,8 +1,7 @@
 {
   "name": "koa-404-handler",
-  "description":
-    "404 handler for Lad and Koa (best used with koa-better-error-handler)",
-  "version": "0.0.2",
+  "description": "404 handler for Lad and Koa (best used with koa-better-error-handler)",
+  "version": "0.1.0",
   "author": "Nick Baugh <niftylettuce@gmail.com> (http://niftylettuce.com/)",
   "bugs": {
     "url": "https://github.com/ladjs/koa-404-handler/issues",
@@ -54,11 +53,16 @@
       "prettier --write --single-quote --trailing-comma none",
       "git add"
     ],
-    "*.md": ["remark . -qfo", "git add"]
+    "*.md": [
+      "remark . -qfo",
+      "git add"
+    ]
   },
   "main": "lib/index.js",
   "remarkConfig": {
-    "plugins": ["preset-github"]
+    "plugins": [
+      "preset-github"
+    ]
   },
   "repository": {
     "type": "git",
@@ -75,7 +79,9 @@
   },
   "xo": {
     "extends": "prettier",
-    "plugins": ["prettier"],
+    "plugins": [
+      "prettier"
+    ],
     "parserOptions": {
       "sourceType": "script"
     },
