@@ -3,9 +3,9 @@ const Router = require('koa-router');
 const Boom = require('boom');
 const test = require('ava');
 const request = require('supertest');
-const koa404Handler = require('../lib');
+const koa404Handler = require('../lib/index.js');
 
-const ok = ctx => {
+const ok = (ctx) => {
   ctx.status = 200;
   ctx.body = { ok: 'ok' };
 };
@@ -14,11 +14,12 @@ const error = () => {
   throw new Error('Big Bad Error!');
 };
 
-test('returns a function', t => {
+test('returns a function', (t) => {
   t.true(typeof koa404Handler === 'function');
 });
 
-test.failing('middleware can be added to the app at any stage', async t => {
+// eslint-disable-next-line node/no-unsupported-features/es-syntax
+test.failing('middleware can be added to the app at any stage', async (t) => {
   const app = new Koa();
   const router = new Router();
 
@@ -39,13 +40,15 @@ test.failing('middleware can be added to the app at any stage', async t => {
   // 404 handler
   app.use(koa404Handler);
 
+  // eslint-disable-next-line unicorn/prevent-abbreviations
   const res = await request(app.listen()).options('/');
 
-  t.is(200, res.status);
+  t.is(res.status, 200);
   t.is(res.body.ok, 'ok');
 });
 
-test('emits error on app instance', async t => {
+// eslint-disable-next-line node/no-unsupported-features/es-syntax
+test('emits error on app instance', async (t) => {
   const app = new Koa();
   const router = new Router();
 
@@ -57,7 +60,7 @@ test('emits error on app instance', async t => {
   // 404 handler
   app.use(koa404Handler);
 
-  app.on('error', error => {
+  app.on('error', (error) => {
     t.truthy(error);
     t.is(error.message, 'Big Bad Error!');
   });

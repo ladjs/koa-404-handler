@@ -13,25 +13,25 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "ava": "^0.22.0",
+    "ava": "^3.15.0",
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "boom": "^5.1.0",
-    "codecov": "^2.3.0",
-    "cross-env": "^5.0.5",
-    "eslint": "^4.5.0",
-    "eslint-config-prettier": "^2.3.0",
-    "eslint-plugin-prettier": "^2.2.0",
-    "husky": "^0.14.3",
-    "koa": "^2.4.1",
-    "koa-router": "^7.3.0",
-    "lint-staged": "^4.0.4",
-    "nyc": "^11.1.0",
-    "prettier": "^1.6.1",
-    "remark-cli": "^4.0.0",
-    "remark-preset-github": "^0.0.6",
-    "supertest": "^3.0.0",
-    "xo": "^0.19.0"
+    "babel-preset-env": "^1.7.0",
+    "boom": "^7.3.0",
+    "codecov": "^3.8.3",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.3.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "koa": "^2.13.4",
+    "koa-router": "^10.1.1",
+    "lint-staged": "^12.1.2",
+    "nyc": "^15.1.0",
+    "prettier": "^2.5.0",
+    "remark-cli": "^10.0.1",
+    "remark-preset-github": "^4.0.1",
+    "supertest": "^6.1.6",
+    "xo": "^0.47.0"
   },
   "engines": {
     "node": ">=6.4"
@@ -97,7 +97,8 @@
       ],
       "capitalized-comments": "off",
       "camelcase": "off",
-      "no-warning-comments": "off"
+      "no-warning-comments": "off",
+      "unicorn/prefer-module": "off"
     },
     "space": true
   }
